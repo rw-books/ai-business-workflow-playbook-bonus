@@ -79,7 +79,10 @@ b, strong { color:var(--head); font-weight:600; }
 .week .d { font:700 12px var(--sans); letter-spacing:.2em; text-transform:uppercase; color:var(--blue-hi); padding-top:4px; }
 .week h3 { font:600 18px/1.3 var(--sans); margin:0 0 4px; letter-spacing:0; }
 .week p { margin:0; font-size:15.5px; }
-.book { max-width:46em; }
+.book { display:grid; grid-template-columns:240px 1fr; gap:56px; align-items:start; }
+.book img { width:100%; height:auto; display:block; border-radius:3px; box-shadow:0 22px 44px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08); }
+.nav-cta { color:#07101F !important; background:linear-gradient(var(--blue-hi), var(--blue-lo)); font-weight:600; padding:9px 18px; border-radius:6px; margin-left:22px; }
+.nav-cta:hover { filter:brightness(1.08); }
 .book ul { padding-left:0; list-style:none; margin:18px 0 24px; }
 .book li { padding:9px 0 9px 26px; border-bottom:1px solid var(--line); position:relative; }
 .book li::before { content:""; position:absolute; left:2px; top:19px; width:9px; height:9px; border:1px solid var(--blue); transform:rotate(45deg); }
@@ -101,6 +104,7 @@ b, strong { color:var(--head); font-weight:600; }
   .looks { grid-template-columns:repeat(2, 1fr); }
   .foot .cols { grid-template-columns:1fr; gap:28px; }
   .nav nav a:not(:last-child) { display:none; }
+  .book { grid-template-columns:1fr; gap:32px; } .book img { max-width:220px; }
   .sec { padding:64px 0; } .card { padding:28px 22px; }
   .card .btn { display:block; margin-right:0; }
 }
@@ -109,7 +113,7 @@ b, strong { color:var(--head); font-weight:600; }
 <body>
 <header class="nav"><div class="wrap">
   <a class="brand" href="#top"><span class="mono">RW</span><span>Reid Weston</span></a>
-  <nav><a href="#kit">Starter kit</a><a href="#week">First week</a><a href="https://www.amazon.com/stores/Reid-Weston/author/B0HN358H29">Books</a></nav>
+  <nav><a href="#kit">Starter kit</a><a href="#week">First week</a><!-- When the book's own Amazon listing is live, point this button at it. --><a class="nav-cta" href="https://www.amazon.com/stores/Reid-Weston/author/B0HN358H29">Get the book</a></nav>
 </div></header>
 
 <main>
@@ -182,6 +186,7 @@ b, strong { color:var(--head); font-weight:600; }
 </div></section>
 
 <section class="sec sec--panel2" id="book"><div class="wrap book">
+  <img src="book-cover.jpg" alt="Cover of 30 Practical AI Workflows for Small Business Owners by Reid Weston" width="780" height="1009" loading="lazy">
   <div>
     <p class="eyebrow">The full playbook</p>
     <h2>30 Practical AI Workflows for Small Business Owners</h2>
